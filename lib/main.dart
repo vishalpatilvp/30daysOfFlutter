@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import 'package:flutter_application_1/pages/login_page.dart';
+import 'pages/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +14,19 @@ class MyApp extends StatelessWidget {
     //we can use 'num' for int,double
     //we can use 'var' for int,double,string
     return MaterialApp(
+      // ignore: prefer_const_constructors
       home: HomePage(),
+      themeMode: ThemeMode.light,
+      darkTheme: ThemeData.light(),
+      theme: ThemeData(primarySwatch: Colors.amber),
+      routes: {
+        // ignore: prefer_const_constructors
+        "/": (context) => LoginPage(),
+        // ignore: prefer_const_constructors
+        "/login": (context) => LoginPage(),
+        // ignore: prefer_const_constructors
+        "/home": (context) => HomePage(),
+      },
     );
   }
 }
