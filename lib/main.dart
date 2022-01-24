@@ -15,18 +15,11 @@ class MyApp extends StatelessWidget {
     //we can use 'var' for int,double,string
     return MaterialApp(
       // ignore: prefer_const_constructors
-      home: HomePage(),
+      home: LoginPage(),
       themeMode: ThemeMode.light,
       darkTheme: ThemeData.light(),
       theme: ThemeData(primarySwatch: Colors.amber),
-      routes: {
-        // ignore: prefer_const_constructors
-        "/": (context) => LoginPage(),
-        // ignore: prefer_const_constructors
-        "/login": (context) => LoginPage(),
-        // ignore: prefer_const_constructors
-        "/home": (context) => HomePage(),
-      },
+      
     );
   }
 }
