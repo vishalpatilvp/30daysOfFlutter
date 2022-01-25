@@ -14,7 +14,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //we can use 'num' for int,double
     //we can use 'var' for int,double,string
-    return MaterialApp(home: HomePage(), initialRoute: "/", routes: {
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
+        
+      ),
+
+      initialRoute: "/", 
+      routes: {
       "/": (context) => LoginPage(),
       MyRoutes.homeRoute: (context) => HomePage(),
       MyRoutes.loginRoute: (context) => LoginPage()
